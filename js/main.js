@@ -1,7 +1,6 @@
-import { projects, filterByTag, sortNewestFirst, getAllTags } from "../src/projects.js";
+import { projects, sortNewestFirst } from "../src/projects.js";
 
 const grid = document.getElementById("project-grid");
-const filters = document.getElementById("filters");
 
 function renderCards(list) {
   grid.innerHTML = "";
@@ -22,19 +21,4 @@ function renderCards(list) {
   });
 }
 
-function renderFilters() {
-  ["all", ...getAllTags(projects)].forEach((tag, i) => {
-    const btn = document.createElement("button");
-    btn.textContent = tag;
-    btn.className = "filter" + (i === 0 ? " active" : "");
-    btn.addEventListener("click", () => {
-      filters.querySelectorAll(".filter").forEach((b) => b.classList.remove("active"));
-      btn.classList.add("active");
-      renderCards(filterByTag(projects, tag));
-    });
-    filters.appendChild(btn);
-  });
-}
-
-renderFilters();
 renderCards(projects);
