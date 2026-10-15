@@ -1,0 +1,9 @@
+PROJECT_NAME         = "Bell Curve Random Generator"
+INPUT                = src/BellCurveRandomGenerator.cs
+FILE_PATTERNS        = *.cs
+OPTIMIZE_OUTPUT_JAVA = YES
+EXTRACT_ALL          = YES
+EXTRACT_PRIVATE      = YES
+OUTPUT_DIRECTORY     = doxygen-out
+GENERATE_HTML        = YES
+GENERATE_LATEX       = NO
