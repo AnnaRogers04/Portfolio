@@ -1,7 +1,7 @@
-# Anna Rogers | Portfolio
-## Bell Curve Random Generator Documentation
 
-### How the code works
+# Bell Curve Random Generator Documentation
+
+## How the code works
 
 `BellCurveRandomGenerator` is a Unity script that rolls three dice and logs the results to the console. When the scene starts, Unity runs the `Start` method. It repeats a loop `sampleCount` times (10 by default), and each time round the loop it rolls a D6, a D12 and a D20, adds the three results into a total, and prints all four numbers with `Debug.Log`.
 
